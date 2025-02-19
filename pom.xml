@@ -64,12 +64,6 @@
 				<artifactId>dynamodb</artifactId>
 				<version>2.20.62</version>
 			</dependency>
-
-			<!-- Spring Data DynamoDB -->
-			<dependency>
-				<groupId>io.github.boostchicken</groupId>
-				<artifactId>spring-data-dynamodb</artifactId>
-			</dependency>
 	</dependencies>
 	<build>
 		<plugins>
