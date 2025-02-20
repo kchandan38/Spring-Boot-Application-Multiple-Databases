@@ -1,4 +1,4 @@
-package com.multiple_database.entity;
+package com.multiple_database.entity.mysql;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

@@ -35,7 +35,7 @@ public class PostgresDbConfiguration {
 	public LocalContainerEntityManagerFactoryBean postgresEntityManagerFactory(EntityManagerFactoryBuilder builder,
 			@Qualifier("postgresDataSource") DataSource dataSource) {
 		return builder.dataSource(dataSource)
-				.packages("com.multiple_database.entity")
+				.packages("com.multiple_database.entity.salary")
 				.persistenceUnit("Salary")
 				.build();
 	}

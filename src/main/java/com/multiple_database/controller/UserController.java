@@ -1,7 +1,7 @@
 package com.multiple_database.controller;
 
-import com.multiple_database.entity.Salary;
-import com.multiple_database.entity.Employee;
+import com.multiple_database.entity.salary.Salary;
+import com.multiple_database.entity.mysql.Employee;
 import com.multiple_database.service.mysql.EmployeeServiceMysql;
 import com.multiple_database.service.postgres.SalaryServicePostgres;
 import org.springframework.beans.factory.annotation.Autowired;

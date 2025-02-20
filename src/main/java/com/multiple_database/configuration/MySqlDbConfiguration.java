@@ -39,7 +39,7 @@ public class MySqlDbConfiguration {
 	public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory(EntityManagerFactoryBuilder builder,
 			@Qualifier("mysqlDataSource") DataSource dataSource) {
 		return builder.dataSource(dataSource)
-				.packages("com.multiple_database.entity")
+				.packages("com.multiple_database.entity.mysql")
 				.persistenceUnit("Employee")
 				.build();
 	}

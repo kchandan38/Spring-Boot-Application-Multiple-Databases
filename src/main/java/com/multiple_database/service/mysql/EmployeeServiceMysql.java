@@ -1,6 +1,6 @@
 package com.multiple_database.service.mysql;
 
-import com.multiple_database.entity.Employee;
+import com.multiple_database.entity.mysql.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
