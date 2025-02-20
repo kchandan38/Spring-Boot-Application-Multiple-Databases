@@ -1,9 +1,9 @@
 package com.multiple_database.controller;
 
 import com.multiple_database.entity.Salary;
-import com.multiple_database.entity.User;
-import com.multiple_database.service.mysql.UserServiceMysql;
-import com.multiple_database.service.postgres.UserServicePostgres;
+import com.multiple_database.entity.Employee;
+import com.multiple_database.service.mysql.EmployeeServiceMysql;
+import com.multiple_database.service.postgres.SalaryServicePostgres;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -15,27 +15,27 @@ import java.util.Optional;
 public class UserController {
 
     @Autowired
-    UserServiceMysql userServiceMysql;
+    EmployeeServiceMysql employeeServiceMysql;
     @Autowired
-    UserServicePostgres userServicePostgres;
+    SalaryServicePostgres salaryServicePostgres;
 
     @PostMapping("/userymsqldata")
-    public User employeeMysql(@RequestBody User user) {
-        return Optional.of(userServiceMysql.save(user)).orElse(null);
+    public Employee employeeMysql(@RequestBody Employee user) {
+        return Optional.of(employeeServiceMysql.save(user)).orElse(null);
     }
     @GetMapping("/users")
-    public List<User> userList() {
+    public List<Employee> userList() {
 
-        return Optional.of(userServiceMysql.findAll()).orElse(null);
+        return Optional.of(employeeServiceMysql.findAll()).orElse(null);
     }
     @PostMapping("/salarypostgresdata")
     public Salary userPostgres(@RequestBody Salary salary) {
-        return Optional.of(userServicePostgres.save(salary)).orElse(null);
+        return Optional.of(salaryServicePostgres.save(salary)).orElse(null);
     }
     @GetMapping("/usersalaries")
     public List<Salary> salaryList() {
 
-        return Optional.of(userServicePostgres.findAll()).orElse(null);
+        return Optional.of(salaryServicePostgres.findAll()).orElse(null);
     }
 
 }

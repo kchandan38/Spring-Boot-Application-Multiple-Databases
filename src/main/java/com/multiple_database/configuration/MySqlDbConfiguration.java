@@ -36,11 +36,11 @@ public class MySqlDbConfiguration {
 
 	@Primary
 	@Bean(name = "mysqlEntityManagerFactory")
-	public LocalContainerEntityManagerFactoryBean employeeEntityManagerFactory(EntityManagerFactoryBuilder builder,
+	public LocalContainerEntityManagerFactoryBean mysqlEntityManagerFactory(EntityManagerFactoryBuilder builder,
 			@Qualifier("mysqlDataSource") DataSource dataSource) {
 		return builder.dataSource(dataSource)
 				.packages("com.multiple_database.entity")
-				.persistenceUnit("User")
+				.persistenceUnit("Employee")
 				.build();
 	}
 
